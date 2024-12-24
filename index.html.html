@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Đăng Nhập Giáng Sinh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            backdrop-filter: blur(5px);
+            padding: 20px;
+        }
+
+        .login-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+            width: 300px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .input-field:focus {
+            border-color: #ff0000;
+            outline: none;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn-login:hover {
+            background-color: #d50000;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 9999;
+            user-select: none;
+            font-size: 1em;
+            color: #fff;
+            opacity: 0.8;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10px;
+                transform: scale(1);
+            }
+            100% {
+                top: 100%;
+                transform: scale(1.5);
+            }
+        }
+
+        .error-message {
+            color: red;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes Effect -->
+    <div class="snowflakes">
+        <div class="snowflake" style="left: 10%; animation-duration: 12s; animation-delay: 0s;">❄️</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 9s; animation-delay: 3s;">❄️</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 10s; animation-delay: 2s;">❄️</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 11s; animation-delay: 4s;">❄️</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 8s; animation-delay: 1s;">❄️</div>
+    </div>
+
+    <!-- Login Form -->
+    <div class="login-container">
+        <div class="login-box">
+            <h2>Đăng Nhập Giáng Sinh</h2>
+            <form id="loginForm">
+                <input class="input-field" type="text" id="username" name="username" placeholder="Tên người dùng" required>
+                <input class="input-field" type="password" id="password" name="password" placeholder="Mật khẩu" required>
+                <button class="btn-login" type="submit">Đăng Nhập</button>
+            </form>
+            <div id="errorMessage" class="error-message"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>Chúc mừng Giáng Sinh!</p>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username === "Noel" && password === "2512") {
+                // Nếu thông tin đăng nhập đúng, chuyển hướng đến trang success.html
+                window.location.href = "success.html"; // Chuyển hướng tới trang thành công
+            } else {
+                // Nếu thông tin đăng nhập sai, hiển thị thông báo lỗi
+                document.getElementById("errorMessage").textContent = "Sai tên người dùng hoặc mật khẩu!";
+            }
+        });
+    </script>
+</body>
+</html>

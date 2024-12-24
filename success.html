@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc Mừng Giáng Sinh</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('https://www.w3schools.com/w3images/forestbridge.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        .message-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+            width: 400px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .snowflakes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            z-index: 9999;
+            user-select: none;
+            font-size: 1.5em;
+            color: #fff;
+            opacity: 0.8;
+            animation: fall 10s linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                top: -10px;
+                transform: scale(1);
+            }
+            100% {
+                top: 100%;
+                transform: scale(1.5);
+            }
+        }
+
+        .btn {
+            padding: 12px 24px;
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #d50000;
+        }
+    </style>
+</head>
+<body>
+    <!-- Snowflakes Effect -->
+    <div class="snowflakes">
+        <div class="snowflake" style="left: 10%; animation-duration: 12s; animation-delay: 0s;">❄️</div>
+        <div class="snowflake" style="left: 30%; animation-duration: 9s; animation-delay: 3s;">❄️</div>
+        <div class="snowflake" style="left: 50%; animation-duration: 10s; animation-delay: 2s;">❄️</div>
+        <div class="snowflake" style="left: 70%; animation-duration: 11s; animation-delay: 4s;">❄️</div>
+        <div class="snowflake" style="left: 90%; animation-duration: 8s; animation-delay: 1s;">❄️</div>
+    </div>
+
+    <!-- Message Box -->
+    <div class="message-box">
+        <h1>Chúc Mừng Giáng Sinh!</h1>
+        <p class="message">Mong rằng mùa lễ hội này mang đến cho bạn thật nhiều niềm vui, hạnh phúc và những khoảnh khắc đáng nhớ bên gia đình và bạn bè.</p>
+        <p class="message">Chúc bạn một năm mới an khang thịnh vượng và mọi điều tốt đẹp nhất!</p>
+        <a href="index.html">
+            <button class="btn">Quay lại Trang Đăng Nhập</button>
+        </a>
+    </div>
+
+    <div class="footer">
+        <p>Chúc mừng Giáng Sinh và Năm Mới!</p>
+    </div>
+</body>
+</html>
